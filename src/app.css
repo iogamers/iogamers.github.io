@@ -1,0 +1,108 @@
+@font-face {
+	font-family: "Carlito";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/carlito/v3/3Jn9SDPw3m-pk039DDeBTA.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: "Lexend";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/lexend/v18/wlptgwvFAVdoq2_F94zlCfv0bz1WCzsWzLdneg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: "Minecraft";
+	src: url("/font/mdt's Minecraft.ttf");
+}
+
+:root {
+	user-select: none;
+	color: #fff;
+	font-family: "Carlito";
+	text-shadow: 1px 1px #000;
+}
+
+.mc-font {
+	font-family: "Minecraft";
+	letter-spacing: none;
+	text-shadow: 2px 2px 0 #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: "Lexend";
+	font-weight: normal;
+	text-shadow: 2px 2px 0 #000a;
+}
+h1.mc-font { font-size: 32px }
+
+p { white-space: pre-line }
+
+a { color: #FFCF96; text-decoration: none }
+a:hover { color: #fff }
+
+table {
+	width: 100%;
+	background: #fff2;
+	border: 1px solid #fff4;
+	border-radius: 16px;
+}
+table td { width: 50% }
+th, td { padding: 4px 8px; vertical-align: top }
+
+html { scrollbar-gutter: stable both-edges }
+body { margin: 0; background: #000 }
+main { display: flex; flex-direction: column; align-items: center; gap: 16px }
+main * { transition: all 0.06s linear }
+
+.logo { padding-top: 64px; max-width: 100% }
+
+.box {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 16px;
+	width: 660px;
+	background: #111;
+	border: 1px solid #333;
+	border-radius: 16px;
+}
+.box:hover { background: #FF8A0022; border-color: #FFCF96; box-shadow: 0 0 8px #FF8A00 }
+.box > p { margin: 0 }
+.box > h2 { letter-spacing: 1px }
+.box:hover > h2 { color: #FFCF96; letter-spacing: 3px }
+
+.seasons {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin: 0 -16px;
+	margin-bottom: -16px;
+}
+
+.season > summary { padding: 12px 16px }
+.season > summary:hover { background: #FF8A0066 }
+.season > summary:active { opacity: 50% }
+
+.readme { padding: 16px }
+.readme h1, .readme h2 {
+	margin-bottom: 16px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #fff2;
+	border-radius: 16px;
+}
+
+@media screen and (max-width: 750px) {
+	:root {
+		font-size: 14px;
+	}
+	.box {
+		max-width: calc(100% - 32px);
+		border-radius: 0;
+	}
+}
